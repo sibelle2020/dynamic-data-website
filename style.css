@@ -209,8 +209,8 @@
   max-width: 100%;
 }
 
-.listProduct .discounted,
-.price span {
+.productlist article .discounted,
+.productlist article .price span {
   display: none;
 }
 
@@ -238,18 +238,22 @@
   color: gainsboro;
 }
 
-section.onSale .discounted {
+.productlist article.onSale .discounted {
   display: flex;
   justify-content: space-between;
 }
 
-.discounted p:last-child {
+.productlist article.onSale .price span {
+  display: initial;
+}
+
+.productlist article.onSale .discounted p:last-child {
   padding: 0.3rem;
   color: white;
   background-color: black;
 }
 
-section.soldOut::before {
+.productlist article.soldOut::before {
   content: "Sold Out";
   text-align: center;
   font-size: 3rem;
@@ -268,9 +272,6 @@ section.soldOut::before {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
   gap: 2rem;
-}
-
-.listProduct {
 }
 
 /* PRODUCT GRID */

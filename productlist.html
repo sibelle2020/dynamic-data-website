@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List</title>
-    <link rel="stylesheet" href="product-style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="productlist">
     <header class="topNav">
       <h1>Bellu SHOP</h1>
       <nav>
@@ -41,7 +41,26 @@
       <h2>Puma</h2>
 
       <div class="listGrid">
-        <section class="listProduct onSale">
+        <template id="listProductTemplate">
+          <article class="listProduct">
+            <img
+              src="https://kea-alt-del.dk/t7/images/webp/640/1535.webp"
+              alt="Unisex Logo Cap"
+            />
+            <h3>Unisex Logo Cap</h3>
+            <p class="subtle">Caps | Puma</p>
+            <p class="price">
+              <span>Prev.</span>
+              DKK 699,-
+            </p>
+            <div class="discounted">
+              <p>Now DKK 585,-</p>
+              <p>-55%</p>
+            </div>
+            <a href="product.html">View More</a>
+          </article>
+        </template>
+        <!--<article class="listProduct onSale">
           <img
             src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp"
             alt="Deck Navy Blue Backpack"
@@ -57,25 +76,8 @@
             <p>-55%</p>
           </div>
           <a href="product.html">View More</a>
-        </section>
-        <section class="listProduct">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/1535.webp"
-            alt="Unisex Logo Cap"
-          />
-          <h3>Unisex Logo Cap</h3>
-          <p class="subtle">Caps | Puma</p>
-          <p class="price">
-            <span>Prev.</span>
-            DKK 699,-
-          </p>
-          <div class="discounted">
-            <p>Now DKK 585,-</p>
-            <p>-55%</p>
-          </div>
-          <a href="product.html">View More</a>
-        </section>
-        <section class="listProduct soldOut">
+        </article>
+        <article class="listProduct soldOut">
           <img
             src="https://kea-alt-del.dk/t7/images/webp/640/1530.webp"
             alt="Track Jacket"
@@ -91,8 +93,8 @@
             <p>-55%</p>
           </div>
           <a href="product.html">View More</a>
-        </section>
-        <section class="listProduct soldOut onSale">
+        </article>
+        <article class="listProduct soldOut onSale">
           <img
             src="https://kea-alt-del.dk/t7/images/webp/640/1548.webp"
             alt="Cell Exsis Sneaker"
@@ -108,7 +110,7 @@
             <p>-73%</p>
           </div>
           <a href="product.html">View More</a>
-        </section>
+        </article>-->
       </div>
     </main>
 
@@ -120,5 +122,6 @@
         >https://www.kaggle.com/paramaggarwal/fashion-product-images-dataset</a
       >
     </footer>
+    <script src="productlist.js"></script>
   </body>
 </html>
