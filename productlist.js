@@ -1,3 +1,5 @@
+// const urlParams = new URLSearchParams
+
 const url = "http://kea-alt-del.dk/t7/api/products";
 
 fetch(url)
@@ -45,6 +47,8 @@ function showProduct(product) {
     "img"
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
+  copy.querySelector("a").href = `product.html?id=${product.id}`;
+
   //ASK ABOUT THIS ONE, HOW NOT TO DELETE SPAN TAG!
   copy.querySelector(".price").textContent = `DKK ${product.price},-`;
 
@@ -54,6 +58,7 @@ function showProduct(product) {
   }
   if (product.discount) {
     copy.querySelector("article").classList.add("onSale");
+    copy.querySelector("article .price").classList.add("scratch");
   }
 
   /*
@@ -63,7 +68,7 @@ function showProduct(product) {
             </div> 
   */
 
-  copy.querySelector(".discounted p").textContent = `Now DKK ${
+  copy.querySelector(".discounted p").textContent = `DKK ${
     product.price - (product.discount / 100) * product.price
   },-`;
 

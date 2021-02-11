@@ -193,6 +193,10 @@
 
 /* PRODUCT LIST STYLING */
 
+.scratch {
+  text-decoration-line: line-through;
+}
+
 .listMain {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -230,6 +234,7 @@
 
 .listProduct a {
   text-decoration: none;
+  text-transform: uppercase;
   font-weight: bold;
   color: dimgray;
 }
@@ -241,6 +246,7 @@
 .productlist article.onSale .discounted {
   display: flex;
   justify-content: space-between;
+  color: red;
 }
 
 .productlist article.onSale .price span {
@@ -250,19 +256,22 @@
 .productlist article.onSale .discounted p:last-child {
   padding: 0.3rem;
   color: white;
-  background-color: black;
+  font-weight: bold;
+  background-color: red;
 }
 
 .productlist article.soldOut::before {
-  content: "Sold Out";
+  content: "SOLD OUT";
   text-align: center;
-  font-size: 3rem;
+  color: dimgray;
+  font-size: 2rem;
+  font-weight: bold;
   position: absolute;
   background-color: gainsboro;
   width: 269px;
   height: 368px;
   padding: 1rem;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 /* PRODUCT LIST GRID */
