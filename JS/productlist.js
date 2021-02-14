@@ -1,6 +1,11 @@
-// const urlParams = new URLSearchParams
+const urlParams = new URLSearchParams(window.location.search);
+const brandname = urlParams.get("brandname");
+document.querySelector("main>h2").textContent = brandname;
+document.querySelector("#nameof").textContent = brandname;
+//console.log(brandname);
 
-const url = "http://kea-alt-del.dk/t7/api/products";
+// const urlParams = new URLSearchParams
+const url = "http://kea-alt-del.dk/t7/api/products?brandname=" + brandname;
 
 fetch(url)
   .then(function (res) {
@@ -39,6 +44,7 @@ function showProduct(product) {
   //clone it
   const copy = template.cloneNode(true);
   //change content
+
   copy.querySelector(
     ".subtle"
   ).textContent = `${product.articletype} | ${product.brandname}`;
