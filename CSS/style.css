@@ -17,7 +17,7 @@
 /* HEADER STYLING ALL */
 
 .topNav {
-  background-color: whitesmoke;
+  background-color: rgb(226, 215, 215);
   padding: 5vw;
   display: flex;
   justify-content: space-between;
@@ -69,7 +69,7 @@
   }
 }
 
-/* BRAND LETTER STYLING */
+/* Category styling */
 
 .categoryMain {
   font-family: "Montserrat", sans-serif;
@@ -93,6 +93,10 @@
 }
 
 .letterLinks a {
+  text-transform: uppercase;
+}
+
+.letterLinks a {
   color: inherit;
   text-decoration: none;
 }
@@ -112,6 +116,7 @@
   font-size: 2.2rem;
   color: black;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .brandList .letterGroup {
@@ -329,7 +334,7 @@
 }
 
 .purchaseBox {
-  background-color: whitesmoke;
+  background-color: rgb(241, 233, 233);
   color: black;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -344,9 +349,9 @@
   line-height: 1.3;
 }
 
-.purchaseBox p {
+.purchaseBox .smallinfo {
   margin-top: 1.2rem;
-  margin-bottom: 2.8rem;
+  margin-bottom: 1.2rem;
   font-size: 1rem;
 }
 
