@@ -5,7 +5,7 @@ document.querySelector("#nameof").textContent = brandname;
 //console.log(brandname);
 
 // const urlParams = new URLSearchParams
-const url = "http://kea-alt-del.dk/t7/api/products?brandname=" + brandname;
+const url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brandname;
 
 fetch(url)
   .then(function (res) {
